@@ -1,10 +1,242 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Investigación OSINT: Pacto Sabroso</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis: Imagen manipulada del "Pacto Sabroso"</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #34495e;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+        }
+        .summary {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary);
+            margin: 2rem 0;
+            font-size: 1.1rem;
+        }
+        .image-comparison {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        .image-box {
+            width: 45%;
+            min-width: 300px;
+            margin: 1rem 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .image-box img {
+            width: 100%;
+            display: block;
+        }
+        .image-label {
+            background-color: var(--dark);
+            color: white;
+            padding: 0.8rem;
+            text-align: center;
+            font-weight: bold;
+        }
+        .methodology {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        .step {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed #ddd;
+        }
+        .step:last-child {
+            border-bottom: none;
+        }
+        .conclusion {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+            margin: 2rem 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--secondary);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .timeline-date {
+            position: absolute;
+            left: -50px;
+            top: 0;
+            width: 40px;
+            text-align: right;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        .timeline-content {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .image-box {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Análisis en progreso</h1>
-    <p>Próximamente: Evidencia técnica de la imagen manipulada.</p>
+    <header>
+        <h1>Análisis de imagen: No existe evidencia que vincule al acusado con el 'Pacto Sabroso'</h1>
+        <p>Verificación técnica de la imagen viral que asocia caso criminal con intereses partidistas</p>
+    </header>
+
+    <div class="summary">
+        <p><strong>Hallazgo principal:</strong> La foto que circula en redes sociales fue manipulada digitalmente para añadir el logo "Pacto Sabroso". La imagen original proviene de un perfil educativo (Red Aeiotu) desde 2022, y el perfil de Facebook donde supuestamente se publicó lleva inactivo desde 2014.</p>
+    </div>
+
+    <section id="image-analysis">
+        <h2>Comparación visual</h2>
+        <div class="image-comparison">
+            <div class="image-box">
+                <div class="image-label">Imagen viral (manipulada)</div>
+                <img src="https://via.placeholder.com/600x400?text=Imagen+con+logo+Pacto+Sabroso" alt="Imagen manipulada con logo político">
+                <div class="image-label">Publicada en mayo 2025</div>
+            </div>
+            <div class="image-box">
+                <div class="image-label">Imagen original</div>
+                <img src="https://via.placeholder.com/600x400?text=Imagen+original+Red+Aeiotu" alt="Imagen original sin logo">
+                <div class="image-label">Subida en marzo 2022</div>
+            </div>
+        </div>
+        <p><em>Nota: Las caras de otras personas en la imagen original han sido pixeladas por privacidad.</em></p>
+    </section>
+
+    <section id="methodology">
+        <h2>Metodología de verificación</h2>
+        
+        <div class="methodology">
+            <div class="step">
+                <h3>Paso 1: Búsqueda del origen de la foto</h3>
+                <p><strong>Procedimiento:</strong></p>
+                <ol>
+                    <li>Extracción de la imagen base (sin el banner añadido)</li>
+                    <li>Búsqueda inversa en Google Images</li>
+                    <li>Identificación de la fuente original</li>
+                </ol>
+                
+                <p><strong>Hallazgo clave:</strong></p>
+                <p>La imagen sin logo aparece como foto de portada en <strong>red.aeiotu.org</strong>, una plataforma educativa para la primera infancia vinculada a Fundación Bancolombia.</p>
+                <img src="https://via.placeholder.com/800x400?text=Captura+Red+Aeiotu" alt="Captura de perfil en Red Aeiotu" style="width:100%; margin-top:1rem;">
+                <p><small>URL omitida para proteger privacidad de otros participantes.</small></p>
+            </div>
+            
+            <div class="step">
+                <h3>Paso 2: Verificación del perfil de Facebook</h3>
+                <p><strong>Perfil analizado:</strong> "DARFRECAS" (inactivo desde 2014)</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2014</div>
+                        <div class="timeline-content">
+                            <p>Última actividad verificable del perfil (2 de noviembre)</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-content">
+                            <p>Fecha que se atribuye falsamente a la publicación (6 de abril)</p>
+                            <p><strong>Inconsistencia:</strong> El perfil llevaba 8 años sin actividad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step">
+                <h3>Paso 3: Rastreo de la primera publicación con el logo</h3>
+                <p><strong>Primera aparición confirmada:</strong></p>
+                <ul>
+                    <li><strong>Plataforma:</strong> Twitter (X)</li>
+                    <li><strong>Cuenta:</strong> @danyhurtado99 (anónima)</li>
+                    <li><strong>Fecha:</strong> 6 de mayo de 2025, 11:36 PM</li>
+                    <li><strong>Patrón:</strong> Cuenta con historial de difusión de contenido político polarizado</li>
+                </ul>
+                
+                <p><strong>Difusión posterior:</strong></p>
+                <ul>
+                    <li>Reddit: 7 de mayo (publicaciones entre 3:59 PM y 7:45 PM)</li>
+                    <li>WhatsApp: Cadenas masivas a partir del 8 de mayo</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="conclusion">
+        <div class="conclusion">
+            <h2>Conclusión técnica</h2>
+            <p>1. <strong>La imagen es un montaje:</strong> El logo "Pacto Sabroso" fue añadido digitalmente a una foto de origen educativo.</p>
+            <p>2. <strong>La atribución a Facebook es falsa:</strong> El perfil citado (DARFRECAS) llevaba inactivo 8 años cuando supuestamente publicó la foto.</p>
+            <p>3. <strong>Patrón de desinformación:</strong> La manipulación se originó en cuentas anónimas con historial de contenido político polarizado.</p>
+            <p>4. <strong>Timing estratégico:</strong> La difusión coincidió con el pico de atención mediática al caso criminal.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Análisis realizado con herramientas de verificación digital | Fecha de publicación: Mayo 2025</p>
+        <p>Este trabajo se basa en evidencia técnica verificable. Las imágenes se han modificado solo para proteger identidades.</p>
+    </footer>
 </body>
 </html>
