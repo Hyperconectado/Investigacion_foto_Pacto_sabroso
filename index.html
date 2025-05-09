@@ -232,6 +232,38 @@
             margin-top: 50px;
         }
 
+        header-content {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .image-frame {
+        width: 90%;
+        max-width: 800px;
+        height: 300px;
+        margin: 20px auto;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        border: 2px solid #ffffff;
+        background: #f8f9fa;
+        position: relative;
+    }
+
+    .header-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .image-frame:hover .header-image {
+        transform: scale(1.03);
+    }
+
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -248,7 +280,20 @@
             .image-container {
                 min-width: 100%;
             }
+
+              @media (max-width: 768px) {
+        .image-frame {
+            width: 95%;
+            height: 250px;
         }
+    }
+
+    @media (max-width: 480px) {
+        .image-frame {
+            height: 200px;
+            border-radius: 8px;
+        }
+        
     </style>
 </head>
 <body>
@@ -256,11 +301,12 @@
     <div class="container header-content">
         <h1>Análisis de imagen viral</h1>
         <div class="image-frame">
-            <img src="/images/Imagenconbanner.JPG" 
-                 alt="Imagen viral analizada" class="header-image">
+            <img src="https://raw.githubusercontent.com/Hyperconectado/Investigacion_foto_Pacto_sabroso/main/images/Imagenconbanner.JPG" 
+                 alt="Imagen viral analizada" 
+                 class="header-image">
         </div>
     </div>
-</header>
+</header
 
     <main class="container">
         <div class="summary-box">
