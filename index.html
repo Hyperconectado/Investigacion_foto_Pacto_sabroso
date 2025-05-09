@@ -20,13 +20,57 @@
             padding: 20px;
             background-color: #f9f9f9;
         }
-        header {
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
             background-color: var(--primary);
-            color: white;
-            padding: 2rem;
+            padding: 30px;
             border-radius: 8px;
-            margin-bottom: 2rem;
-            text-align: center;
+            color: white;
+            flex-wrap: wrap;
+        }
+        
+        .header-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .header-image {
+            flex: 0 0 250px;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .header-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        h1 {
+            margin: 0 0 15px 0;
+            font-size: 1.8rem;
+            line-height: 1.3;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            .header-image {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 250px;
+            }
         }
         h1 {
             margin: 0;
@@ -139,11 +183,14 @@
     </style>
 </head>
 <body>
-<header style="position: relative;">
-    <img src="images/IMG_0678.JPG" alt="Imagen de análisis" style="width: 100%; height: auto; opacity: 0.7;">
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; width: 100%;">
-        <h1 style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Análisis de imagen: No existe evidencia que vincule al acusado con el 'Pacto Sabroso'</h1>
-        <p style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Verificación técnica de la imagen viral que asocia caso criminal con intereses partidistas</p>
+    <div class="header-container">
+        <div class="header-text">
+            <h1>Análisis de imagen: Relación de imagen viral del "Pacto Sabroso" con trabajador del ICBF denunciado por delitos contra la libertad, integridad y formación sexual</h1>
+            <p class="subtitle">Verificación técnica  que asocia caso criminal con intereses partidistas</p>
+        </div>
+        <div class="header-image">
+            <img src="images/IMG_0678.JPG" alt="Imagen de análisis del caso">
+        </div>
     </div>
 </header>
 
